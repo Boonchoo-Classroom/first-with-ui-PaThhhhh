@@ -10,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat
 class LoginActivity : AppCompatActivity() {
 
     lateinit var backToMainBtn: Button
+    lateinit var enterBtn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,8 +23,11 @@ class LoginActivity : AppCompatActivity() {
         }
 
         backToMainBtn = findViewById(R.id.loginBackToMainBtn)
-
-        backToMainBtn.setOnClickListener() {
+        enterBtn = findViewById(R.id.Enter)
+        enterBtn.setOnClickListener{
+                finish()
+        }
+        backToMainBtn.setOnClickListener {
             finish()
         }
     }
